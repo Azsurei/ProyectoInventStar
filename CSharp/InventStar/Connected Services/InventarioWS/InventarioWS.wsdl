@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.inventstar.cdejava.lp2/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="InventarioWS" targetNamespace="http://services.inventstar.cdejava.lp2/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/CdeJavaInventstarWebService/InventarioWS?xsd=1" namespace="http://services.inventstar.cdejava.lp2/" />
+    </xsd:schema>
+  </types>
+  <message name="listarLotes">
+    <part name="parameters" element="tns:listarLotes" />
+  </message>
+  <message name="listarLotesResponse">
+    <part name="parameters" element="tns:listarLotesResponse" />
+  </message>
+  <message name="listarTodasBebidas">
+    <part name="parameters" element="tns:listarTodasBebidas" />
+  </message>
+  <message name="listarTodasBebidasResponse">
+    <part name="parameters" element="tns:listarTodasBebidasResponse" />
+  </message>
+  <message name="insertarProveedor">
+    <part name="parameters" element="tns:insertarProveedor" />
+  </message>
+  <message name="insertarProveedorResponse">
+    <part name="parameters" element="tns:insertarProveedorResponse" />
+  </message>
+  <message name="eliminarProveedor">
+    <part name="parameters" element="tns:eliminarProveedor" />
+  </message>
+  <message name="eliminarProveedorResponse">
+    <part name="parameters" element="tns:eliminarProveedorResponse" />
+  </message>
+  <message name="listarOrdenCompraPorP">
+    <part name="parameters" element="tns:listarOrdenCompraPorP" />
+  </message>
+  <message name="listarOrdenCompraPorPResponse">
+    <part name="parameters" element="tns:listarOrdenCompraPorPResponse" />
+  </message>
+  <message name="listarComidasXNombre">
+    <part name="parameters" element="tns:listarComidasXNombre" />
+  </message>
+  <message name="listarComidasXNombreResponse">
+    <part name="parameters" element="tns:listarComidasXNombreResponse" />
+  </message>
+  <message name="listarTodosInsumos">
+    <part name="parameters" element="tns:listarTodosInsumos" />
+  </message>
+  <message name="listarTodosInsumosResponse">
+    <part name="parameters" element="tns:listarTodosInsumosResponse" />
+  </message>
+  <message name="listarOrdenCompras">
+    <part name="parameters" element="tns:listarOrdenCompras" />
+  </message>
+  <message name="listarOrdenComprasResponse">
+    <part name="parameters" element="tns:listarOrdenComprasResponse" />
+  </message>
+  <message name="listarIngredientesXNombre">
+    <part name="parameters" element="tns:listarIngredientesXNombre" />
+  </message>
+  <message name="listarIngredientesXNombreResponse">
+    <part name="parameters" element="tns:listarIngredientesXNombreResponse" />
+  </message>
+  <message name="listarTodasComidas">
+    <part name="parameters" element="tns:listarTodasComidas" />
+  </message>
+  <message name="listarTodasComidasResponse">
+    <part name="parameters" element="tns:listarTodasComidasResponse" />
+  </message>
+  <message name="insertarOrdenCompra">
+    <part name="parameters" element="tns:insertarOrdenCompra" />
+  </message>
+  <message name="insertarOrdenCompraResponse">
+    <part name="parameters" element="tns:insertarOrdenCompraResponse" />
+  </message>
+  <message name="listarIngrediente">
+    <part name="parameters" element="tns:listarIngrediente" />
+  </message>
+  <message name="listarIngredienteResponse">
+    <part name="parameters" element="tns:listarIngredienteResponse" />
+  </message>
+  <message name="listarOrdenCompraPorProveedor">
+    <part name="parameters" element="tns:listarOrdenCompraPorProveedor" />
+  </message>
+  <message name="listarOrdenCompraPorProveedorResponse">
+    <part name="parameters" element="tns:listarOrdenCompraPorProveedorResponse" />
+  </message>
+  <message name="obtenerContactoPorIdProveedor">
+    <part name="parameters" element="tns:obtenerContactoPorIdProveedor" />
+  </message>
+  <message name="obtenerContactoPorIdProveedorResponse">
+    <part name="parameters" element="tns:obtenerContactoPorIdProveedorResponse" />
+  </message>
+  <message name="listarTodosInsumosXNombre">
+    <part name="parameters" element="tns:listarTodosInsumosXNombre" />
+  </message>
+  <message name="listarTodosInsumosXNombreResponse">
+    <part name="parameters" element="tns:listarTodosInsumosXNombreResponse" />
+  </message>
+  <message name="insertarInsumoPerecible">
+    <part name="parameters" element="tns:insertarInsumoPerecible" />
+  </message>
+  <message name="insertarInsumoPerecibleResponse">
+    <part name="parameters" element="tns:insertarInsumoPerecibleResponse" />
+  </message>
+  <message name="modificarProveedor">
+    <part name="parameters" element="tns:modificarProveedor" />
+  </message>
+  <message name="modificarProveedorResponse">
+    <part name="parameters" element="tns:modificarProveedorResponse" />
+  </message>
+  <message name="modificarInsumoPerecible">
+    <part name="parameters" element="tns:modificarInsumoPerecible" />
+  </message>
+  <message name="modificarInsumoPerecibleResponse">
+    <part name="parameters" element="tns:modificarInsumoPerecibleResponse" />
+  </message>
+  <message name="eliminarOrdenCompra">
+    <part name="parameters" element="tns:eliminarOrdenCompra" />
+  </message>
+  <message name="eliminarOrdenCompraResponse">
+    <part name="parameters" element="tns:eliminarOrdenCompraResponse" />
+  </message>
+  <message name="insertarMerma">
+    <part name="parameters" element="tns:insertarMerma" />
+  </message>
+  <message name="insertarMermaResponse">
+    <part name="parameters" element="tns:insertarMermaResponse" />
+  </message>
+  <message name="listarMerma">
+    <part name="parameters" element="tns:listarMerma" />
+  </message>
+  <message name="listarMermaResponse">
+    <part name="parameters" element="tns:listarMermaResponse" />
+  </message>
+  <message name="insertarBebida">
+    <part name="parameters" element="tns:insertarBebida" />
+  </message>
+  <message name="insertarBebidaResponse">
+    <part name="parameters" element="tns:insertarBebidaResponse" />
+  </message>
+  <message name="modificarBebida">
+    <part name="parameters" element="tns:modificarBebida" />
+  </message>
+  <message name="modificarBebidaResponse">
+    <part name="parameters" element="tns:modificarBebidaResponse" />
+  </message>
+  <message name="insertarComida">
+    <part name="parameters" element="tns:insertarComida" />
+  </message>
+  <message name="insertarComidaResponse">
+    <part name="parameters" element="tns:insertarComidaResponse" />
+  </message>
+  <message name="modificarMerma">
+    <part name="parameters" element="tns:modificarMerma" />
+  </message>
+  <message name="modificarMermaResponse">
+    <part name="parameters" element="tns:modificarMermaResponse" />
+  </message>
+  <message name="eliminarComida">
+    <part name="parameters" element="tns:eliminarComida" />
+  </message>
+  <message name="eliminarComidaResponse">
+    <part name="parameters" element="tns:eliminarComidaResponse" />
+  </message>
+  <message name="eliminarBebida">
+    <part name="parameters" element="tns:eliminarBebida" />
+  </message>
+  <message name="eliminarBebidaResponse">
+    <part name="parameters" element="tns:eliminarBebidaResponse" />
+  </message>
+  <message name="modificarComida">
+    <part name="parameters" element="tns:modificarComida" />
+  </message>
+  <message name="modificarComidaResponse">
+    <part name="parameters" element="tns:modificarComidaResponse" />
+  </message>
+  <message name="listarMercancia">
+    <part name="parameters" element="tns:listarMercancia" />
+  </message>
+  <message name="listarMercanciaResponse">
+    <part name="parameters" element="tns:listarMercanciaResponse" />
+  </message>
+  <message name="listarProveedor">
+    <part name="parameters" element="tns:listarProveedor" />
+  </message>
+  <message name="listarProveedorResponse">
+    <part name="parameters" element="tns:listarProveedorResponse" />
+  </message>
+  <message name="eliminarMerma">
+    <part name="parameters" element="tns:eliminarMerma" />
+  </message>
+  <message name="eliminarMermaResponse">
+    <part name="parameters" element="tns:eliminarMermaResponse" />
+  </message>
+  <portType name="InventarioWS">
+    <operation name="listarLotes">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/listarLotesRequest" message="tns:listarLotes" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/listarLotesResponse" message="tns:listarLotesResponse" />
+    </operation>
+    <operation name="listarTodasBebidas">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/listarTodasBebidasRequest" message="tns:listarTodasBebidas" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/listarTodasBebidasResponse" message="tns:listarTodasBebidasResponse" />
+    </operation>
+    <operation name="insertarProveedor">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/insertarProveedorRequest" message="tns:insertarProveedor" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/insertarProveedorResponse" message="tns:insertarProveedorResponse" />
+    </operation>
+    <operation name="eliminarProveedor">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/eliminarProveedorRequest" message="tns:eliminarProveedor" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/eliminarProveedorResponse" message="tns:eliminarProveedorResponse" />
+    </operation>
+    <operation name="listarOrdenCompraPorP">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/listarOrdenCompraPorPRequest" message="tns:listarOrdenCompraPorP" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/listarOrdenCompraPorPResponse" message="tns:listarOrdenCompraPorPResponse" />
+    </operation>
+    <operation name="listarComidasXNombre">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/listarComidasXNombreRequest" message="tns:listarComidasXNombre" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/listarComidasXNombreResponse" message="tns:listarComidasXNombreResponse" />
+    </operation>
+    <operation name="listarTodosInsumos">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/listarTodosInsumosRequest" message="tns:listarTodosInsumos" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/listarTodosInsumosResponse" message="tns:listarTodosInsumosResponse" />
+    </operation>
+    <operation name="listarOrdenCompras">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/listarOrdenComprasRequest" message="tns:listarOrdenCompras" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/listarOrdenComprasResponse" message="tns:listarOrdenComprasResponse" />
+    </operation>
+    <operation name="listarIngredientesXNombre">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/listarIngredientesXNombreRequest" message="tns:listarIngredientesXNombre" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/listarIngredientesXNombreResponse" message="tns:listarIngredientesXNombreResponse" />
+    </operation>
+    <operation name="listarTodasComidas">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/listarTodasComidasRequest" message="tns:listarTodasComidas" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/listarTodasComidasResponse" message="tns:listarTodasComidasResponse" />
+    </operation>
+    <operation name="insertarOrdenCompra">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/insertarOrdenCompraRequest" message="tns:insertarOrdenCompra" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/insertarOrdenCompraResponse" message="tns:insertarOrdenCompraResponse" />
+    </operation>
+    <operation name="listarIngrediente">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/listarIngredienteRequest" message="tns:listarIngrediente" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/listarIngredienteResponse" message="tns:listarIngredienteResponse" />
+    </operation>
+    <operation name="listarOrdenCompraPorProveedor">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/listarOrdenCompraPorProveedorRequest" message="tns:listarOrdenCompraPorProveedor" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/listarOrdenCompraPorProveedorResponse" message="tns:listarOrdenCompraPorProveedorResponse" />
+    </operation>
+    <operation name="obtenerContactoPorIdProveedor">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/obtenerContactoPorIdProveedorRequest" message="tns:obtenerContactoPorIdProveedor" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/obtenerContactoPorIdProveedorResponse" message="tns:obtenerContactoPorIdProveedorResponse" />
+    </operation>
+    <operation name="listarTodosInsumosXNombre">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/listarTodosInsumosXNombreRequest" message="tns:listarTodosInsumosXNombre" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/listarTodosInsumosXNombreResponse" message="tns:listarTodosInsumosXNombreResponse" />
+    </operation>
+    <operation name="insertarInsumoPerecible">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/insertarInsumoPerecibleRequest" message="tns:insertarInsumoPerecible" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/insertarInsumoPerecibleResponse" message="tns:insertarInsumoPerecibleResponse" />
+    </operation>
+    <operation name="modificarProveedor">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/modificarProveedorRequest" message="tns:modificarProveedor" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/modificarProveedorResponse" message="tns:modificarProveedorResponse" />
+    </operation>
+    <operation name="modificarInsumoPerecible">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/modificarInsumoPerecibleRequest" message="tns:modificarInsumoPerecible" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/modificarInsumoPerecibleResponse" message="tns:modificarInsumoPerecibleResponse" />
+    </operation>
+    <operation name="eliminarOrdenCompra">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/eliminarOrdenCompraRequest" message="tns:eliminarOrdenCompra" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/eliminarOrdenCompraResponse" message="tns:eliminarOrdenCompraResponse" />
+    </operation>
+    <operation name="insertarMerma">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/insertarMermaRequest" message="tns:insertarMerma" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/insertarMermaResponse" message="tns:insertarMermaResponse" />
+    </operation>
+    <operation name="listarMerma">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/listarMermaRequest" message="tns:listarMerma" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/listarMermaResponse" message="tns:listarMermaResponse" />
+    </operation>
+    <operation name="insertarBebida">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/insertarBebidaRequest" message="tns:insertarBebida" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/insertarBebidaResponse" message="tns:insertarBebidaResponse" />
+    </operation>
+    <operation name="modificarBebida">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/modificarBebidaRequest" message="tns:modificarBebida" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/modificarBebidaResponse" message="tns:modificarBebidaResponse" />
+    </operation>
+    <operation name="insertarComida">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/insertarComidaRequest" message="tns:insertarComida" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/insertarComidaResponse" message="tns:insertarComidaResponse" />
+    </operation>
+    <operation name="modificarMerma">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/modificarMermaRequest" message="tns:modificarMerma" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/modificarMermaResponse" message="tns:modificarMermaResponse" />
+    </operation>
+    <operation name="eliminarComida">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/eliminarComidaRequest" message="tns:eliminarComida" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/eliminarComidaResponse" message="tns:eliminarComidaResponse" />
+    </operation>
+    <operation name="eliminarBebida">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/eliminarBebidaRequest" message="tns:eliminarBebida" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/eliminarBebidaResponse" message="tns:eliminarBebidaResponse" />
+    </operation>
+    <operation name="modificarComida">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/modificarComidaRequest" message="tns:modificarComida" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/modificarComidaResponse" message="tns:modificarComidaResponse" />
+    </operation>
+    <operation name="listarMercancia">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/listarMercanciaRequest" message="tns:listarMercancia" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/listarMercanciaResponse" message="tns:listarMercanciaResponse" />
+    </operation>
+    <operation name="listarProveedor">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/listarProveedorRequest" message="tns:listarProveedor" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/listarProveedorResponse" message="tns:listarProveedorResponse" />
+    </operation>
+    <operation name="eliminarMerma">
+      <input wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/eliminarMermaRequest" message="tns:eliminarMerma" />
+      <output wsam:Action="http://services.inventstar.cdejava.lp2/InventarioWS/eliminarMermaResponse" message="tns:eliminarMermaResponse" />
+    </operation>
+  </portType>
+  <binding name="InventarioWSPortBinding" type="tns:InventarioWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarLotes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodasBebidas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarProveedor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarProveedor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarOrdenCompraPorP">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarComidasXNombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosInsumos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarOrdenCompras">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarIngredientesXNombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodasComidas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarOrdenCompra">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarIngrediente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarOrdenCompraPorProveedor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerContactoPorIdProveedor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosInsumosXNombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarInsumoPerecible">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarProveedor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarInsumoPerecible">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarOrdenCompra">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarMerma">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarMerma">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarBebida">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarBebida">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarComida">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarMerma">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarComida">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarBebida">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarComida">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarMercancia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarProveedor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarMerma">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="InventarioWS">
+    <port name="InventarioWSPort" binding="tns:InventarioWSPortBinding">
+      <soap:address location="http://localhost:8080/CdeJavaInventstarWebService/InventarioWS" />
+    </port>
+  </service>
+</definitions>

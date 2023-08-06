@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.inventstar.cdejava.lp2/" targetNamespace="http://services.inventstar.cdejava.lp2/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarBebida" type="tns:eliminarBebida" />
+  <xs:element name="eliminarBebidaResponse" type="tns:eliminarBebidaResponse" />
+  <xs:element name="eliminarComida" type="tns:eliminarComida" />
+  <xs:element name="eliminarComidaResponse" type="tns:eliminarComidaResponse" />
+  <xs:element name="eliminarMerma" type="tns:eliminarMerma" />
+  <xs:element name="eliminarMermaResponse" type="tns:eliminarMermaResponse" />
+  <xs:element name="eliminarOrdenCompra" type="tns:eliminarOrdenCompra" />
+  <xs:element name="eliminarOrdenCompraResponse" type="tns:eliminarOrdenCompraResponse" />
+  <xs:element name="eliminarProveedor" type="tns:eliminarProveedor" />
+  <xs:element name="eliminarProveedorResponse" type="tns:eliminarProveedorResponse" />
+  <xs:element name="insertarBebida" type="tns:insertarBebida" />
+  <xs:element name="insertarBebidaResponse" type="tns:insertarBebidaResponse" />
+  <xs:element name="insertarComida" type="tns:insertarComida" />
+  <xs:element name="insertarComidaResponse" type="tns:insertarComidaResponse" />
+  <xs:element name="insertarInsumoPerecible" type="tns:insertarInsumoPerecible" />
+  <xs:element name="insertarInsumoPerecibleResponse" type="tns:insertarInsumoPerecibleResponse" />
+  <xs:element name="insertarMerma" type="tns:insertarMerma" />
+  <xs:element name="insertarMermaResponse" type="tns:insertarMermaResponse" />
+  <xs:element name="insertarOrdenCompra" type="tns:insertarOrdenCompra" />
+  <xs:element name="insertarOrdenCompraResponse" type="tns:insertarOrdenCompraResponse" />
+  <xs:element name="insertarProveedor" type="tns:insertarProveedor" />
+  <xs:element name="insertarProveedorResponse" type="tns:insertarProveedorResponse" />
+  <xs:element name="listarComidasXNombre" type="tns:listarComidasXNombre" />
+  <xs:element name="listarComidasXNombreResponse" type="tns:listarComidasXNombreResponse" />
+  <xs:element name="listarIngrediente" type="tns:listarIngrediente" />
+  <xs:element name="listarIngredienteResponse" type="tns:listarIngredienteResponse" />
+  <xs:element name="listarIngredientesXNombre" type="tns:listarIngredientesXNombre" />
+  <xs:element name="listarIngredientesXNombreResponse" type="tns:listarIngredientesXNombreResponse" />
+  <xs:element name="listarLotes" type="tns:listarLotes" />
+  <xs:element name="listarLotesResponse" type="tns:listarLotesResponse" />
+  <xs:element name="listarMercancia" type="tns:listarMercancia" />
+  <xs:element name="listarMercanciaResponse" type="tns:listarMercanciaResponse" />
+  <xs:element name="listarMerma" type="tns:listarMerma" />
+  <xs:element name="listarMermaResponse" type="tns:listarMermaResponse" />
+  <xs:element name="listarOrdenCompraPorP" type="tns:listarOrdenCompraPorP" />
+  <xs:element name="listarOrdenCompraPorPResponse" type="tns:listarOrdenCompraPorPResponse" />
+  <xs:element name="listarOrdenCompraPorProveedor" type="tns:listarOrdenCompraPorProveedor" />
+  <xs:element name="listarOrdenCompraPorProveedorResponse" type="tns:listarOrdenCompraPorProveedorResponse" />
+  <xs:element name="listarOrdenCompras" type="tns:listarOrdenCompras" />
+  <xs:element name="listarOrdenComprasResponse" type="tns:listarOrdenComprasResponse" />
+  <xs:element name="listarProveedor" type="tns:listarProveedor" />
+  <xs:element name="listarProveedorResponse" type="tns:listarProveedorResponse" />
+  <xs:element name="listarTodasBebidas" type="tns:listarTodasBebidas" />
+  <xs:element name="listarTodasBebidasResponse" type="tns:listarTodasBebidasResponse" />
+  <xs:element name="listarTodasComidas" type="tns:listarTodasComidas" />
+  <xs:element name="listarTodasComidasResponse" type="tns:listarTodasComidasResponse" />
+  <xs:element name="listarTodosInsumos" type="tns:listarTodosInsumos" />
+  <xs:element name="listarTodosInsumosResponse" type="tns:listarTodosInsumosResponse" />
+  <xs:element name="listarTodosInsumosXNombre" type="tns:listarTodosInsumosXNombre" />
+  <xs:element name="listarTodosInsumosXNombreResponse" type="tns:listarTodosInsumosXNombreResponse" />
+  <xs:element name="modificarBebida" type="tns:modificarBebida" />
+  <xs:element name="modificarBebidaResponse" type="tns:modificarBebidaResponse" />
+  <xs:element name="modificarComida" type="tns:modificarComida" />
+  <xs:element name="modificarComidaResponse" type="tns:modificarComidaResponse" />
+  <xs:element name="modificarInsumoPerecible" type="tns:modificarInsumoPerecible" />
+  <xs:element name="modificarInsumoPerecibleResponse" type="tns:modificarInsumoPerecibleResponse" />
+  <xs:element name="modificarMerma" type="tns:modificarMerma" />
+  <xs:element name="modificarMermaResponse" type="tns:modificarMermaResponse" />
+  <xs:element name="modificarProveedor" type="tns:modificarProveedor" />
+  <xs:element name="modificarProveedorResponse" type="tns:modificarProveedorResponse" />
+  <xs:element name="obtenerContactoPorIdProveedor" type="tns:obtenerContactoPorIdProveedor" />
+  <xs:element name="obtenerContactoPorIdProveedorResponse" type="tns:obtenerContactoPorIdProveedorResponse" />
+  <xs:complexType name="modificarInsumoPerecible">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:insumoPerecible" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insumoPerecible">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:lote">
+        <xs:sequence>
+          <xs:element name="activo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="comida" type="tns:comida" />
+          <xs:element minOccurs="0" name="fechaIngeso" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="fechaVencimiento" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ingrediente" type="tns:ingrediente" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="lote">
+    <xs:sequence>
+      <xs:element name="cantidad" type="xs:double" />
+      <xs:element name="idLote" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="ordenCompra" type="tns:ordenCompra" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="comida">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:alimento">
+        <xs:sequence>
+          <xs:element name="activo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="insumo" type="tns:insumoPerecible" />
+          <xs:element name="segundosACalentar" type="xs:int" />
+          <xs:element minOccurs="0" name="tipo" type="tns:tipoDeComida" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="alimento" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:producto">
+        <xs:sequence>
+          <xs:element name="calorias" type="xs:int" />
+          <xs:element name="cantidad" type="xs:double" />
+          <xs:element minOccurs="0" name="unidadMedida" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="producto">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:itemVenta">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="itemVenta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="idItemVenta" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="precioUnitario" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ingrediente">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="bebida" type="tns:bebida" />
+      <xs:element name="cantidad" type="xs:double" />
+      <xs:element name="idIngrediente" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="unidadMedida" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bebida">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:alimento">
+        <xs:sequence>
+          <xs:element name="activo" type="xs:boolean" />
+          <xs:element name="esFria" type="xs:boolean" />
+          <xs:element minOccurs="0" name="instrucciones" type="xs:string" />
+          <xs:element minOccurs="0" name="tamanho" type="tns:tamanhoBebida" />
+          <xs:element name="tiempoPreparacion" type="xs:int" />
+          <xs:element minOccurs="0" name="tipo" type="tns:tipoDeBebida" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ordenCompra">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estado" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaCompra" type="xs:dateTime" />
+      <xs:element name="idCompra" type="xs:int" />
+      <xs:element minOccurs="0" name="proveedor" type="tns:proveedor" />
+      <xs:element minOccurs="0" name="sucursal" type="tns:sucursal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="proveedor">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element name="idProveedor" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="RUC" type="xs:string" />
+      <xs:element minOccurs="0" name="razonSocial" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sucursal">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="aforo" type="xs:int" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element name="id_sucursal" type="xs:int" />
+      <xs:element minOccurs="0" name="matriz" type="tns:matriz" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="matriz">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="direccionMatriz" type="xs:string" />
+      <xs:element minOccurs="0" name="emailMatriz" type="xs:string" />
+      <xs:element name="id_matriz" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreMatriz" type="xs:string" />
+      <xs:element minOccurs="0" name="razonsocialMatriz" type="xs:string" />
+      <xs:element minOccurs="0" name="telefonoMatriz" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarInsumoPerecibleResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarOrdenCompra">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarOrdenCompraResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerContactoPorIdProveedor">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerContactoPorIdProveedorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:contacto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contacto">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:persona">
+        <xs:sequence>
+          <xs:element name="activo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="proveedor" type="tns:proveedor" />
+          <xs:element minOccurs="0" name="puesto" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="persona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidoMat" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidoPat" type="xs:string" />
+      <xs:element minOccurs="0" name="domicilio" type="xs:string" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaCumpleanhos" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
+      <xs:element name="idPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="nombres" type="xs:string" />
+      <xs:element minOccurs="0" name="numDocumento" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono1" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono2" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarLotes">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarLotesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:insumoPerecible" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodosInsumos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosInsumosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:insumoPerecible" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarComida">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarComidaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarMerma">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarMermaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:merma" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="merma">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="cantidad" type="xs:double" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
+      <xs:element name="idMerma" type="xs:int" />
+      <xs:element minOccurs="0" name="lote" type="tns:lote" />
+      <xs:element minOccurs="0" name="motivo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarBebida">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarBebidaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarOrdenCompraPorProveedor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:proveedor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarOrdenCompraPorProveedorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ordenCompra" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarIngredientesXNombre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarIngredientesXNombreResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ingrediente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodosInsumosXNombre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodosInsumosXNombreResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:insumoPerecible" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodasBebidas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodasBebidasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:bebida" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarOrdenCompra">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:ordenCompra" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarOrdenCompraResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarInsumoPerecible">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:insumoPerecible" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarInsumoPerecibleResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarBebida">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:bebida" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarBebidaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarComida">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:comida" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarComidaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarMerma">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="merma" type="tns:merma" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarMermaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarProveedor">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarProveedorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:proveedor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarMercancia">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarMercanciaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:mercancia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mercancia">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:producto">
+        <xs:sequence>
+          <xs:element name="activo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="categoria" type="tns:categoriaMercancia" />
+          <xs:element minOccurs="0" name="codigoBarras" type="xs:string" />
+          <xs:element minOccurs="0" name="lote" type="tns:lote" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="listarTodasComidas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodasComidasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:comida" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarProveedor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:proveedor" />
+      <xs:element minOccurs="0" name="arg1" type="tns:contacto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarProveedorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarComidasXNombre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarComidasXNombreResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:comida" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarMerma">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="merma" type="tns:merma" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarMermaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarBebida">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:bebida" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarBebidaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarProveedor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:proveedor" />
+      <xs:element minOccurs="0" name="arg1" type="tns:contacto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarProveedorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarMerma">
+    <xs:sequence>
+      <xs:element name="idMerma" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarMermaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarOrdenCompraPorP">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarOrdenCompraPorPResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ordenCompra" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarComida">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:comida" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarComidaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarIngrediente">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarIngredienteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ingrediente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarProveedor">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarProveedorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarOrdenCompras">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarOrdenComprasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ordenCompra" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="tipoDeComida">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Pastries" />
+      <xs:enumeration value="Sandwiches" />
+      <xs:enumeration value="Postres" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tamanhoBebida">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Alto" />
+      <xs:enumeration value="Grande" />
+      <xs:enumeration value="Venti" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tipoDeBebida">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Frapuccinos" />
+      <xs:enumeration value="ExpressoCaliente" />
+      <xs:enumeration value="ExpressoFrio" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="categoriaMercancia">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Vaso" />
+      <xs:enumeration value="Taza" />
+      <xs:enumeration value="Bolsa" />
+      <xs:enumeration value="Maquina" />
+      <xs:enumeration value="Accesorio" />
+      <xs:enumeration value="Otro" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
